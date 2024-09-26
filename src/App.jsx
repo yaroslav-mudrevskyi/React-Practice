@@ -1,14 +1,22 @@
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import WelcomeSection from "./components/WelcomeSection/WelcomeSectiom";
+import Message from "./components/Message/Message";
+import { messageData } from "./helpers/messageData";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
-      <WelcomeSection />
+      {messageData.map((message) => (
+        <Message
+          key={message.id}
+          name={message.name}
+          fathers={message.fathers}
+          online={message.online}
+        />
+      ))}
       <Footer />
-    </div>
+    </>
   );
 };
 

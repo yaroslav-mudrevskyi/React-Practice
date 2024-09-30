@@ -3,19 +3,21 @@ import s from "./Counter.module.css";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
+  const [step, setStep] = useState(1);
 
   const handleMinusClick = () => {
     if (counter < 1) return;
-    setCounter(counter - 1);
+    setCounter((prev) => prev - step);
   };
 
   const handleResetClick = () => {
     setCounter(0);
+    setStep(1);
   };
 
   const handlePlusClick = () => {
     // setCounter(counter + 1);
-    setCounter((prev) => prev + 1);
+    setCounter((prev) => prev + step);
   };
 
   const sum = (name) => {
@@ -28,7 +30,7 @@ const Counter = () => {
     <div className={s.flexContainer}>
       <div className={s.wrapper}>
         <h1>{counter}</h1>
-        <input />
+        <input value={step} onChange={(e) => setStep(+e.target.value)} />
         <div className={s.flex}>
           <button onClick={handleMinusClick} className={s.btn}>
             minus

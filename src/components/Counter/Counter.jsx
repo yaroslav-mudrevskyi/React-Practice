@@ -2,7 +2,7 @@ import { useState } from "react";
 import s from "./Counter.module.css";
 
 const Counter = () => {
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(0);
 
   const handleMinusClick = () => {
     if (counter < 1) return;
@@ -10,12 +10,19 @@ const Counter = () => {
   };
 
   const handleResetClick = () => {
-    setCounter(1);
+    setCounter(0);
   };
 
   const handlePlusClick = () => {
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
+    setCounter((prev) => prev + 1);
   };
+
+  const sum = (name) => {
+    console.log(`Welcome, ${name}`);
+  };
+
+  sum("Petya");
 
   return (
     <div className={s.flexContainer}>

@@ -31,6 +31,7 @@ const Vote = () => {
             {btn}
           </button>
         ))}
+        {/* Щоб не було дублювання коду, як в кнопках нижче, роблю через Object.keys і map, як вище */}
         {/* <button onClick={() => handleChangeValue("mac")}>Mac</button>
         <button onClick={() => handleChangeValue("windows")}>Windows</button>
         <button onClick={() => handleChangeValue("linux")}>Linux</button> */}

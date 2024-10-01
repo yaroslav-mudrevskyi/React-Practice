@@ -1,6 +1,6 @@
-import s from "./ColorPicker.module.css";
-import colors from "../../assets/colors.json";
 import { useState } from "react";
+import colors from "../../assets/colors.json";
+import s from "./ColorPicker.module.css";
 
 const ColorPicker = () => {
   const [currentColor, setCurrentColor] = useState("white");
@@ -12,9 +12,9 @@ const ColorPicker = () => {
         <ul className={s.list}>
           {colors.map((item) => (
             <li
-              onClick={() => setCurrentColor(item.color)}
               className={s.item}
               key={item.id}
+              onClick={() => setCurrentColor(item.color)}
             >
               {item.color}
             </li>

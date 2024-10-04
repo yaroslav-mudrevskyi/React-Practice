@@ -10,8 +10,6 @@ const Modal = ({ onClose, children, title = "Default modal" }) => {
 
   useEffect(() => {
     const handlePressKey = (e) => {
-      console.log(e.key);
-
       if (e.key === "Escape") {
         onClose();
       }

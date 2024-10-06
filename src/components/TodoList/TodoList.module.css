@@ -1,0 +1,85 @@
+.wrapperTodoList {
+  padding: 20px;
+}
+
+.actionSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 4px 4px lightcoral;
+  border-radius: 10px;
+  & button {
+    background: none;
+    border-radius: 50%;
+    border: 1px solid darkgray;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.2);
+      background-color: rgba(31, 174, 210, 0.656);
+    }
+  }
+}
+
+.addForm {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  background: none;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 1px 1px 2px 2px rgb(169, 162, 162);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: white;
+    background-color: rgb(101, 157, 122);
+    cursor: pointer;
+  }
+}
+
+.input {
+  padding: 5px;
+  padding-left: 12px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 1px 1px 2px 2px rgb(169, 162, 162);
+  &:focus {
+    outline: none;
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 25px;
+}
+
+.filterBtn {
+  composes: btn;
+  color: darkgreen;
+  background-color: cornsilk;
+}

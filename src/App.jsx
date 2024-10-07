@@ -1,9 +1,9 @@
-import TodoList from "./components/TodoList/TodoList";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 const App = () => {
   return (
     <>
-      <TodoList />
+      <LoginForm />
     </>
   );
 };

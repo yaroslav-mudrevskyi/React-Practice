@@ -35,6 +35,11 @@
   }
 }
 
+.textarea {
+  composes: input;
+  resize: none;
+}
+
 .btn {
   padding: 6px 14px;
   background-color: transparent;
